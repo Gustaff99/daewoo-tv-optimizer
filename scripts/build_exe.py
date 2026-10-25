@@ -85,10 +85,11 @@ def build(adb: Path, gui: bool = False) -> Path:
     ]
     if gui:
         # Sin consola: el doble clic abre la ventana tkinter directamente.
+        # PyInstaller usa `--hidden-import` (no existe `--hiddenimports`).
         cmd += [
             "--windowed",
-            "--hiddenimports=tkinter",
-            "--hiddenimports=tkinter.messagebox",
+            "--hidden-import=tkinter",
+            "--hidden-import=tkinter.messagebox",
         ]
     cmd.append(str(ROOT / "cli.py"))
     print("[build_exe] " + " ".join(cmd), file=sys.stderr)
