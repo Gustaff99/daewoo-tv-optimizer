@@ -99,6 +99,22 @@ def build(adb: Path, gui: bool = False) -> Path:
     return out
 
 
+def _kill_tree(proc: subprocess.Popen) -> None:
+    """Mata el proceso y sus hijos.
+
+    PyInstaller onefile = bootloader (padre) + Python (hijo). Matar solo al
+    padre en Windows deja al hijo vivo; si el hijo sostiene las pipes de
+    stdout/stderr, `communicate()`/`wait()` se bloquean para siempre.
+    """
+    if os.name == "nt":
+        subprocess.run(
+            ["taskkill", "/F", "/T", "/PID", str(proc.pid)],
+            capture_output=True,
+        )
+    else:
+        proc.kill()
+
+
 def smoke_test(exe: Path, gui: bool = False) -> None:
     print("[build_exe] smoke test: identify --model 55DM75QV --os VIDAA", file=sys.stderr)
     proc = subprocess.run(
@@ -117,20 +133,43 @@ def smoke_test(exe: Path, gui: bool = False) -> None:
 
     # Entrada sin argumentos (doble clic) no debe morir en silencio:
     # - build de consola: menú terminal; con stdin cerrado sale con 0.
-    # - build --gui headless: no hay display ni consola; sale con 1 y
-    #   escribe el aviso en el log de errores (comportamiento esperado).
+    # - build --gui: si hay display, la ventana se abre y bloquea en el
+    #   mainloop (el proceso sigue VIVO); si no hay display, sale con 1 y
+    #   escribe el aviso en el log de errores. Ambas son correctas.
     print("[build_exe] smoke test: entrada sin argumentos (doble clic)", file=sys.stderr)
-    proc = subprocess.run(
-        [str(exe)],
-        stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=180,
-    )
     if gui:
-        if proc.returncode != 1:
-            raise SystemExit(
-                f"smoke test: build --gui headless debe salir 1 (sin display), "
-                f"salió {proc.returncode}"
+        # stdout/stderr a un ARCHIVO (no a pipes): si el hijo del onefile
+        # queda huérfano, no sostiene pipes y `wait()` no se bloquea.
+        log_path = Path(os.environ.get("TEMP", "/tmp")) / "daewoo-smoke-noargs.log"
+        with open(log_path, "w") as logf:
+            proc = subprocess.Popen(
+                [str(exe)],
+                stdin=subprocess.DEVNULL,
+                stdout=logf,
+                stderr=logf,
             )
+            try:
+                try:
+                    rc = proc.wait(timeout=30)
+                    # Salió solo: solo es válido en headless (sin display),
+                    # donde la GUI no puede abrirse y el aviso va al log.
+                    if rc != 1:
+                        raise SystemExit(
+                            f"smoke test: build --gui headless debe salir 1, "
+                            f"salió {rc}"
+                        )
+                except subprocess.TimeoutExpired:
+                    # Sigue vivo tras 30s: la ventana está abierta (hay
+                    # display). Comportamiento correcto de doble clic.
+                    pass
+            finally:
+                _kill_tree(proc)
+                proc.wait(timeout=30)
     else:
+        proc = subprocess.run(
+            [str(exe)],
+            stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=180,
+        )
         if proc.returncode != 0:
             raise SystemExit(
                 f"smoke test: menú terminal con stdin cerrado debe salir 0, "
