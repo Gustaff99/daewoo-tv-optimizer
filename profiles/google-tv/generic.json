@@ -1,0 +1,66 @@
+{
+  "profile": "google-tv/generic",
+  "os_family": "google-tv",
+  "models": [],
+  "actions_allowed": true,
+  "min_confidence": "conclusive",
+  "status": "lista-conservadora-pendiente-validacion-por-dispositivo",
+  "mechanism": "pm disable-user --user 0 <pkg> (reversible con pm enable --user 0 <pkg>)",
+  "safety": {
+    "dry_run_by_default": true,
+    "requires_explicit_confirmation_per_action": true,
+    "no_uninstall": true,
+    "no_root": true,
+    "no_firmware_modification": true,
+    "log_all_operations": true,
+    "restore_path": "pm enable --user 0 <pkg> para cada paquete deshabilitado; inventario inicial obligatorio"
+  },
+  "candidate_discovery": {
+    "known_packages": [
+      {"package": "com.google.android.play.games", "reason": "Google Play Games: bloat en TV, sin dependencias esenciales"},
+      {"package": "com.google.android.feedback", "reason": "App de feedback de Google: no aporta funcion en TV"},
+      {"package": "com.google.android.katniss", "reason": "Reportador de errores de Google: telemetria"},
+      {"package": "com.android.cts.ctsshim", "reason": "Paquetes de prueba CTS: solo test, no esenciales"},
+      {"package": "com.android.cts.priv.ctsshim", "reason": "Paquetes de prueba CTS: solo test, no esenciales"}
+    ],
+    "patterns": [
+      {"regex": "^com\\.android\\.cts\\.", "reason": "Paquetes de prueba CTS detectados en el inventario"},
+      {"regex": "\\.demo$", "reason": "App demo del fabricante detectada en el inventario"}
+    ]
+  },
+  "critical_exclusions": {
+    "packages": [
+      "com.google.tv",
+      "com.google.android.tv",
+      "com.google.android.tvlauncher",
+      "com.android.systemui",
+      "com.android.settings",
+      "com.android.settings.intelligence",
+      "com.android.providers.settings",
+      "com.android.providers.media",
+      "com.android.providers.tv",
+      "com.google.android.gms",
+      "com.google.android.gsf",
+      "com.google.android.vending",
+      "com.google.android.tv.assistant",
+      "com.google.android.tvrecommendations",
+      "com.google.android.tv.frameworkpackagestubs",
+      "com.google.android.youtube.tv",
+      "com.google.android.onetimeinitializer",
+      "com.google.android.setupwizard",
+      "com.google.android.permissioncontroller",
+      "com.google.android.packageinstaller",
+      "com.google.android.webview",
+      "com.android.bluetooth",
+      "com.android.networkstack.inprocess"
+    ],
+    "rules": [
+      "launcher Google TV (com.google.tv) y TV launcher",
+      "asistentes y recomendaciones de Google TV (parte de la experiencia principal)",
+      "conectividad: wifi, bluetooth, networkstack",
+      "YouTube TV y plataforma Google (gms/gsf/vending) esenciales para streaming y actualizaciones"
+    ],
+    "note": "Lista basica de plataforma Google TV. La red nucleo del planner (engine/planner.py CORE_EXCLUSIONS) protege ademas launcher/ajustes/conectividad/plataforma. El motor comprueba en el inventario real que cada candidato no cae en exclusiones y lo registra en el log."
+  },
+  "description": "Perfil generico Google TV. Solo se aplica con evidencia concluyente (ADB en el dispositivo o ficha oficial). Para modelos nuevos (sin perfil propio) propone una lista conservadora de bloatware universal filtrada contra el inventario real y las exclusiones. Toda accion requiere confirmacion explicita; el modo por defecto es dry-run."
+}

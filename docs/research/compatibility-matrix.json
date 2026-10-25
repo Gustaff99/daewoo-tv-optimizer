@@ -1,0 +1,1841 @@
+{
+  "version": 1,
+  "generated_at": "2026-10-25T14:05:00Z",
+  "market": "es-europa",
+  "source_catalog": "daewooelectronics.com (catálogo ES, verificado contra sitemap oficial)",
+  "model_count": 32,
+  "models": [
+    {
+      "slug": "32de15hl-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32de15hl-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": null,
+        "provenance": "derived_from_slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "parsed_from_page": {
+          "screen_size": {
+            "value": "32",
+            "evidence": "Product Information Sheets\n \n \n \n\n\n \n \n \n \n Destacados\n \n \n \n \n \n Tamaño de pantalla: 32 Resolución: HD Tecnología de pantalla: DLED Sistema operativo: No inteligente"
+          },
+          "resolution": {
+            "value": "HD",
+            "evidence": "Information Sheets\n \n \n \n\n\n \n \n \n \n Destacados\n \n \n \n \n \n Tamaño de pantalla: 32 Resolución: HD Tecnología de pantalla: DLED Sistema operativo: No inteligente"
+          },
+          "panel": {
+            "value": "DLED",
+            "evidence": "ets\n \n \n \n\n\n \n \n \n \n Destacados\n \n \n \n \n \n Tamaño de pantalla: 32 Resolución: HD Tecnología de pantalla: DLED Sistema operativo: No inteligente \n \n \n \n \n \n \n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n.some-css{}\n#r"
+          }
+        }
+      },
+      "os": {
+        "value": "non_smart",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-32de15hl-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Non-smart\"; tags=['EUROPE', 'Germany', 'NO', 'NON-Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_applicable",
+        "reason": "Televisor no inteligente según ficha oficial: no hay paquetes que deshabilitar (fuera de alcance del optimizador)."
+      },
+      "risks": [],
+      "smart_tv": {
+        "value": false,
+        "evidence": "os\n \n \n \n \n \n Tamaño de pantalla: 32 Resolución: HD Tecnología de pantalla: DLED Sistema operativo: No inteligente \n \n \n \n \n \n \n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n.some-css{}\n#recaptcha-widget-container {\n width:"
+      }
+    },
+    {
+      "slug": "32de73hli-32hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32de73hli-32hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/01_32DE73HLI.pdf",
+          "sha256": "2ba84376435e355b7c7ee990789f5a9c40c13223b82abea5a67d56f7389b0b51",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-32de73hli-32hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "32de74hli-32hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32de74hli-32hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/02_32DE74HLI.pdf",
+          "sha256": "89ab44e2db3ab5c7db2b7cac251562ddcb5cb00d1b53a11ef060f73ad5b6bfae",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-32de74hli-32hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Germany', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "32dm64ha-hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32dm64ha-hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/03_32DM64HA.pdf",
+          "sha256": "8014262da559710f462cdcdf458da28f7cb5198d4bc29c74a13cf24760f0eb46",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "android_tv",
+        "status": "verified",
+        "source": "daewooelectronics.com (oficial, vía índice web); daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.com/collections/smart-tv/products/daewoo-32dm64ha-hd-dled-tv",
+          "https://www.daewooelectronics.es/products/daewoo-32dm64ha-hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Android TV\"; tags=['Android Tv', 'EUROPE', 'Smart TV', 'Spain', 'TV'] | Página oficial exacta 32DM64HA: Highlights says Operating System: Android TV (crawl 'last week')",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "32dm65hv-hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32dm65hv-hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/04_32DM65HV.pdf",
+          "sha256": "8073b7a55a3b212a393f89af2129845f44b43cf81c5527cf697c98e3761e6504",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.com (oficial, vía índice web); daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.com/collections/vidaa/products/daewoo-32dm65hv-hd-dled-tv",
+          "https://www.daewooelectronics.es/products/daewoo-32dm65hv-hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA'] | Página oficial exacta 32DM65HV: Highlights says Operating System: VIDAA (crawl 'last month'). Muestra que el sufijo de la familia DM65 no es clasificador de SO ",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "32dm85hv-hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32dm85hv-hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/05_32DM85HV.pdf",
+          "sha256": "5765d0c287c1ac7cc2955d2f1ee2ba8c65696c7f208181c81caabca12ca5e970",
+          "origin": "eprel",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-32dm85hv-hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "32dm95hv-32hd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-32dm95hv-32hd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 32,
+        "panel": "dled",
+        "res_class": "hd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1366x768",
+          "panel": "LCD",
+          "screen_inch": 32,
+          "screen_cm": 80.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/06_32DM95HV.pdf",
+          "sha256": "a2e903bea14722eb999f12abcf39763469f432db0bd792f7604f02fb60036381",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1366x768",
+          "slug_class": "hd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-32dm95hv-32hd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40de73fli-40fhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40de73fli-40fhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/07_40DE73FLI.pdf",
+          "sha256": "5fc27d2ae6100d191b00c2875f8ac63bd9947b2188dab8ab55917b6065b1941e",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40de73fli-40fhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm62fa-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm62fa-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": null,
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/08_40DM62FA.pdf",
+          "sha256": "b49d0945cd57325cbcaf51d8b0593f2227eb407b32461df4003f710d14c64975",
+          "origin": "shopify",
+          "model_match": true
+        }
+      },
+      "os": {
+        "value": "android_tv",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm62fa-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Android TV\"; tags=['Android Tv', 'EUROPE', 'Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm63fa-40fhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm63fa-40fhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/09_40DM63FA.pdf",
+          "sha256": "9001f19de5c82e041044767f508f395fbff802a9aeaac74a9f65ec604e33e308",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "android_tv",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm63fa-40fhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Android Tv\"; tags=['Android Tv', 'EUROPE', 'Germany', 'Smart TV', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm65fv-fhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm65fv-fhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/10_40DM65FV.pdf",
+          "sha256": "35e632e4b81c6588be1ed02fdad4747a203f0a09effd26f64b5f258734a54302",
+          "origin": "eprel",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm65fv-fhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm85fv-40-fhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm85fv-40-fhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/11_40DM85FV.pdf",
+          "sha256": "3a127bf2db864cce607f2185383489cfd5804a4d83cba1394219b174c98a0e8c",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm85fv-40-fhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm95fv-40fhd-dled-tv-2",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm95fv-40fhd-dled-tv-2",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "dled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/12_40DM95FV.pdf",
+          "sha256": "1ff4847edb68dcc5f465649e20c5df5d68d6d13f36690c047eb93f3e8e6fa35e",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm95fv-40fhd-dled-tv-2"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Germany', 'Smart TV', 'TV', 'Vidaa']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "40dm95qv-40-fhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-40dm95qv-40-fhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 40,
+        "panel": "qled",
+        "res_class": "fhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "1920x1080",
+          "panel": "QLED LCD",
+          "screen_inch": 40,
+          "screen_cm": 100.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/13_40DM95QV.pdf",
+          "sha256": "40fb92629f1616eae8d8b0b88f3906be5e7bf9733d9d282b3045deb86aba58e2",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "1920x1080",
+          "slug_class": "fhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-40dm95qv-40-fhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm55uv-43-uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm55uv-43-uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/14_43DM55UV.pdf",
+          "sha256": "93b5e8b1d203a82ed87a6e74c0c267f807e0995e57b9579bfda37fa11fcc0f6d",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-43dm55uv-43-uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm56qv-43-uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm56qv-43-uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/15_43DM56QV.pdf",
+          "sha256": "30ae212c40599aa879e327982124ef711d52db22275b5765e47973818095164f",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-43dm56qv-43-uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm65qv-uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm65qv-uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/16_43DM65QV.pdf",
+          "sha256": "4bc01ebf1e6c0f305fa66b15614e72b4b827d238d0f4e746a4a928f2269fe809",
+          "origin": "eprel",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.com (oficial, vía índice web); daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.com/collections/smart-tv/products/daewoo-43dm65qv-uhd-qled-tv",
+          "https://www.daewooelectronics.es/products/daewoo-43dm65qv-uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA'] | Página oficial exacta 43DM65QV: Highlights says Operating System: VIDAA (crawl 'last week')",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm65uv-43uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm65uv-43uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/17_43DM65UV.pdf",
+          "sha256": "7a7b9c9e6aa99a0a702049c52f8292575ab46fc52fe222123430958332bd50cc",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-43dm65uv-43uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm72qa-uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm72qa-uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/18_43DM72QA.pdf",
+          "sha256": "8feca20a0fe450e7ffc65c3d20447dc5fce5fcf4314de337537a6f37c9995993",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "android_tv",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-43dm72qa-uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Android TV\"; tags=['Android Tv', 'EUROPE', 'Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "43dm75qv-43uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-43dm75qv-43uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 43,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 43,
+          "screen_cm": 108.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/19_43DM75QV.pdf",
+          "sha256": "707e32ec6f1ca19e237d0eb814a031479a4b1dac243160f137e7ff38b4db39c1",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.com (oficial, vía índice web); daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.com/collections/vidaa/products/daewoo-43dm75qv-43uhd-qled-tv",
+          "https://www.daewooelectronics.es/products/daewoo-43dm75qv-43uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA'] | Página oficial exacta 43DM75QV: Highlights says Operating System: VIDAA (crawl 'last week')",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "50de82uli-50uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-50de82uli-50uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 50,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 50,
+          "screen_cm": 126.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/20_50DE82ULI.pdf",
+          "sha256": "ed17b46a51fe069b0385cbcb2ed19e1cfeb2544b9199173ae997a9c5ae9238cc",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-50de82uli-50uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "50dm56qv-43-uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-50dm56qv-43-uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 50,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "derived_from_slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha"
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-50dm56qv-43-uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "50dm56uv-50uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-50dm56uv-50uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 50,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 50,
+          "screen_cm": 126.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/22_50DM56UV.pdf",
+          "sha256": "e1bd5d4e74cd9cc0411fffa14821ca34d5444126c995d48b2591b926e70fcf18",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-50dm56uv-50uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "50dm65qv-50uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-50dm65qv-50uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 50,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 50,
+          "screen_cm": 126.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/23_50DM65QV.pdf",
+          "sha256": "567982886c30692e0ed6c46ad06611cc0a6b6e9eef5b948856eecb616a0bd602",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-50dm65qv-50uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "50dm75qv-50uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-50dm75qv-50uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 50,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 50,
+          "screen_cm": 126.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/24_50DM75QV.pdf",
+          "sha256": "eb0ecc13163285ac6c6b353eee3b1faa93eef11c5000d1c6cd08cf0ff5242c05",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-50dm75qv-50uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "55de82uli-55uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-55de82uli-55uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 55,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 55,
+          "screen_cm": 139.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "F",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/25_55DE82ULI.pdf",
+          "sha256": "e4a88fa948e93e716419066c23e3955b11f3efcb17655ae57a18e2f2ab61fe0a",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-55de82uli-55uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "55dm56qv-55-uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-55dm56qv-55-uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 55,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 55,
+          "screen_cm": 139.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "D",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/26_55DM56QV.pdf",
+          "sha256": "e148df5e4754d8ca1dd3444da2fd172f4a73de4c1287e2eb8472c3a7e5d2cbac",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-55dm56qv-55-uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Vidaa\"; tags=['TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "55dm65qv-55uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-55dm65qv-55uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 55,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 55,
+          "screen_cm": 139.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/27_55DM65QV.pdf",
+          "sha256": "7e52fa31e6dc1f7eb4312fcf862d6a1c50e948057315fd4b8426b8c0d79e8778",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-55dm65qv-55uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "55dm65uv-55uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-55dm65uv-55uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 55,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 55,
+          "screen_cm": 139.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/28_55DM65UV.pdf",
+          "sha256": "e802fe82e7be8cd8f6c41916545fde99b803930781e98a81e05e473be921d22a",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-55dm65uv-55uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "55dm75qv-55uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-55dm75qv-55uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 55,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 55,
+          "screen_cm": 139.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/29_55DM75QV.pdf",
+          "sha256": "9376a5888448bf0d733b9b5effa82b8b20a6c6e1c27c3cec98714a668bcf5011",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "vidaa",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json); markandbuy.com (retailer, ES)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-55dm75qv-55uhd-qled-tv",
+          "https://www.markandbuy.com/product/daewoo-55dm75qv-televisor-55-qled-uhd"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"VIDAA\"; tags=['EUROPE', 'Smart TV', 'Spain', 'TV', 'VIDAA'] | Televisor DAEWOO 55DM75QV con pantalla de 55\" QLED UHD 4K, 3840 x 2160 píxeles, Smart TV, Vidaa con Wi-Fi de doble banda, control por voz, sintonizador satélite",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "65de82uli-65uhd-dled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-65de82uli-65uhd-dled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 65,
+        "panel": "dled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "LCD",
+          "screen_inch": 65,
+          "screen_cm": 164.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/30_65DE82ULI.pdf",
+          "sha256": "1ec253ae1fe3442771bd9c9068662951a1bfec79dc13e22ee471d3c73cf42ccc",
+          "origin": "shopify",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "tivo",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-65de82uli-65uhd-dled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Tivo\"; tags=['EUROPE', 'Italy', 'Smart TV', 'Tivo', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    },
+    {
+      "slug": "65dm72uaqp-65uhd-qled-tv",
+      "url": "https://www.daewooelectronics.com/es/products/daewoo-65dm72uaqp-65uhd-qled-tv",
+      "verified_in_sitemap": true,
+      "specs": {
+        "size_inch": 65,
+        "panel": "qled",
+        "res_class": "uhd",
+        "provenance": "eprel_fiche+slug",
+        "provenance_note": "Nomenclatura del vendor en la URL oficial; no de la ficha",
+        "eprel_fiche": {
+          "resolution": "3840x2160",
+          "panel": "QLED LCD",
+          "screen_inch": 65,
+          "screen_cm": 164.0,
+          "refresh_hz": 50,
+          "energy_class_sdr": "E",
+          "provenance": "eprel_fiche",
+          "provenance_note": "Ficha EPREL de etiquetado energético (UE 2019/2013) entregada por el operador; registro oficial UE.",
+          "source_pdf": "Fichas/31_65DM72UAQP.pdf",
+          "sha256": "54746b5985ce9cac4df6b92bc1a25a85f859c041d5bc67181e4efa1c5aadc4bc",
+          "origin": "eprel",
+          "model_match": true
+        },
+        "cross_check": {
+          "field": "resolution",
+          "eprel": "3840x2160",
+          "slug_class": "uhd",
+          "match": true
+        }
+      },
+      "os": {
+        "value": "android_tv",
+        "status": "verified",
+        "source": "daewooelectronics.es (oficial, products.json)",
+        "source_urls": [
+          "https://www.daewooelectronics.es/products/daewoo-65dm72uaqp-65uhd-qled-tv"
+        ],
+        "confidence": "high",
+        "evidence": "product_type=\"Android Tv\"; tags=['Android Tv', 'EUROPE', 'Germany', 'Smart TV', 'Spain', 'TV']",
+        "provenance": "official: fetch HTTP 200 fresco de products.json de la tienda oficial .es"
+      },
+      "hardware_platform": {
+        "value": null,
+        "status": "pending_verification"
+      },
+      "diagnosis_methods": {
+        "adb": "unknown",
+        "usb_execution": "unknown",
+        "note": "No asumir ADB: depende del SO real (pendiente)."
+      },
+      "optimization": {
+        "status": "not_assessed",
+        "actions": []
+      },
+      "risks": []
+    }
+  ],
+  "notes": [
+    "os.value=null es intencional: no se inventa el SO sin ficha real.",
+    "specs derivados del slug oficial del vendor (medium confidence).",
+    "specs EPREL integradas de 30 fichas PDF del operador (provenance eprel_fiche, high); 0 con cross-check de resolución no coincidente.",
+    "SO verificado para el 100% de los modelos; no quedan pendientes.",
+    "OS verificado por fuente fetchable (dato explícito): 32; hipótesis por serie (no asignadas): 0. Los modelos sin fuente explícita siguen en pending_verification.",
+    "optimization no evaluado hasta identificar SO real (fail-safe).",
+    "on_device_models: dispositivos verificados en hardware real (fuente ADB); no pertenecen al catálogo ES y no alteran model_count.",
+    "D43DM55UQPMS: Android 11 AOSP TV (Vestel EMIR/shandao), sin plataforma Google TV certificada; perfil de modelo con acciones permitidas por evidencia adb_match (FASE 7, 2026-10-25)."
+  ],
+  "on_device_models": [
+    {
+      "model": "D43DM55UQPMS",
+      "verified_in_sitemap": false,
+      "catalog_note": "No aparece en el catálogo ES de daewooelectronics.com (probable distribución fuera de ES); verificado en dispositivo real.",
+      "evidence": {
+        "source": "Sondeo ADB de solo lectura en dispositivo real (FASE 7, 2026-10-25)",
+        "fingerprint": "My/EMIR/shandao:11/RTM3.211215.317/8963041:user/release-keys",
+        "os": "Android 11 (SDK 30) — AOSP sin plataforma Google TV/Android TV certificada",
+        "oem": "Vestel, plataforma EMIR/shandao (MediaTek)",
+        "packages_total": 134,
+        "packages_enabled": 120,
+        "packages_disabled": 14,
+        "launcher_home": "com.google.android.tvlauncher (HOME preferido) + com.android.tv.settings/.system.FallbackHome"
+      },
+      "os": "android (aosp-uncertified)",
+      "profile": "aosp-tv/daewoo-d43dm55uqpms",
+      "profile_status": "actions_allowed=true con evidencia adb_match (prefijo de fingerprint My/EMIR/shandao); dry-run por defecto, confirmacion explicita por accion, restauracion con pm enable --user 0",
+      "optimization": "admisible — deshabilitacion reversible de paquetes (pm disable-user) sobre 7 candidatos con exclusiones criticas basadas en el inventario real de 134 paquetes"
+    }
+  ]
+}

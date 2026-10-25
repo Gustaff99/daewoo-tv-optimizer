@@ -1,0 +1,13 @@
+{
+  "profile": "unsupported/default",
+  "os_family": null,
+  "models": [],
+  "actions_allowed": false,
+  "policy": "fail-safe: sin identificación concluyente no se modifica nada",
+  "description": "Perfil por defecto. Se aplica a cualquier dispositivo que no tenga un perfil específico verificado. El motor de ejecución debe negar TODA acción con este perfil.",
+  "user_actions": [
+    "Localizar el modelo en Ajustes > Información (o en la etiqueta trasera).",
+    "Comprobar el SO mostrado en el menú de información.",
+    "Si el televisor permite ADB, ejecutar la detección desde un ordenador."
+  ]
+}

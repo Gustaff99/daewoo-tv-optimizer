@@ -1,0 +1,13 @@
+{
+  "profile": "proprietary/tivo",
+  "os_family": "tivo",
+  "models": [],
+  "actions_allowed": false,
+  "min_confidence": "likely",
+  "policy": "SO propietario (TiVO): sin ADB, sin paquetes de terceros. El motor no genera ninguna accion; solo se muestran ajustes nativos documentados.",
+  "user_actions": [
+    "Revisar los ajustes del sistema para desactivar funciones no usadas si el SO lo permite.",
+    "No copiar nada del USB a este televisor: no admite paquetes de terceros y este USB NO es un dispositivo de firmware."
+  ],
+  "description": "Perfil informativo para TVs Daewoo con TiVO. Sin superficie de modificacion segura conocida: acciones_allowed=false siempre."
+}

@@ -1,0 +1,22 @@
+{
+  "sourceIssueId": "3cb51193-2bc9-4bc0-ab8e-5eceaf8d26c5",
+  "verdict": "continue",
+  "cause": "El bloqueo MIS-9 no demuestra agotamiento de las fuentes de SO ni atribuye el HTTP 429 al proxy. La búsqueda web integrada disponible en esta ejecución puede recuperar resultados indexados de páginas oficiales Daewoo con el campo explícito Operating System, sin repetir solicitudes al endpoint agotado. El checkpoint y source-elimination-2026-10-24.md también mantienen una hipótesis de serie Android para DM65QV que contradice una ficha oficial exacta 43DM65QV=VIDAA.",
+  "evidence": [
+    "Daewoo official product page, https://www.daewooelectronics.com/collections/smart-tv/products/daewoo-43dm65qv-uhd-qled-tv (web search result from 2026-10-25, crawled last week): exact model 43DM65QV; Highlights says Operating System: VIDAA. This is indexed page evidence, not a fresh HTTP fetch.",
+    "Daewoo official product page, https://www.daewooelectronics.com/collections/smart-tv/products/daewoo-32dm64ha-hd-dled-tv (web search result from 2026-10-25, crawled last week): exact model 32DM64HA; Highlights says Operating System: Android TV.",
+    "Daewoo official product page, https://www.daewooelectronics.com/collections/vidaa/products/daewoo-32dm65hv-hd-dled-tv (web search result from 2026-10-25, crawled last month): exact model 32DM65HV; Highlights says Operating System: VIDAA. This shows the DM65 family suffix alone is not a safe OS classifier.",
+    "Daewoo official product page, https://www.daewooelectronics.com/collections/vidaa/products/daewoo-43dm75qv-43uhd-qled-tv (web search result from 2026-10-25, crawled last week): exact model 43DM75QV; Highlights says Operating System: VIDAA.",
+    "Daewoo official collection page, https://www.daewooelectronics.com/collections/tv (web search result from 2026-10-25, crawled last month): collection reports 32 products and OS filter counts including Android TV, Non-Smart, TiVo, and VIDAA. This is an index/navigation result, not sufficient to assign an OS to each model.",
+    "Local audit: daewoo-tv-optimizer/docs/research/source-elimination-2026-10-24.md says 'solo está en el sitio oficial Shopify' and attributes the 429 to proxy egress without evidence establishing either claim. The 2026-10-24T223237Z products-probe artifact contains a TOO_MANY_REQUESTS body but no response headers or proxy attribution; the body alone does not identify which layer returned it.",
+    "Capability used: the integrated web search tool is available in this run and returned the official pages above. No repeat HTTP probe, VPN, new proxy, network change, or credential access was used.",
+    "Required escalation materials were not present in the cloned repository or /home/gus/paperclip-stack: no source-issue escalation package or supervision-policy document was found. Paperclip issue/comment/status mutation tools were also not exposed in the available tool inventory, so this report is committed locally as the user-prescribed fallback."
+  ],
+  "plan": [
+    "Do not retry GET /products.json or increment the exhausted probe budget. Treat the origin of the recorded 429 as undetermined unless response headers or independent server-side evidence identify the responding layer.",
+    "Replace the claim that official product OS data is exclusive to a blocked direct fetch with a bounded model-by-model web-index lookup against exact official product URLs. Search by exact model and require the exact product page's explicit Operating System field; store query, retrieval date, canonical URL, captured excerpt, and confidence as per-model provenance.",
+    "Promote only exact-model official results to verified. Record 43DM65QV=VIDAA and 32DM64HA=Android TV from the cited exact pages if these SKUs are in the catalog. Keep series-level estimates as hypotheses, and remove or re-evaluate DM65QV→Android in light of the exact 43DM65QV result.",
+    "For models with no indexed exact official product result, keep pending_verification. Use the existing scripts/ingest_local_pages.py as a targeted fallback only for that residual list; do not ask for all 30 pages again before trying this route.",
+    "Save search evidence and update os-evidence plus the matrix through the existing build_matrix.py pipeline; check for parser support for citation-only indexed evidence before changing code. Then run only the relevant parser/matrix tests and report indexed evidence separately from fresh HTTP verification."
+  ]
+}

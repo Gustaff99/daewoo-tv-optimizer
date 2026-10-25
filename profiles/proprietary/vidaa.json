@@ -1,0 +1,14 @@
+{
+  "profile": "proprietary/vidaa",
+  "os_family": "vidaa",
+  "models": [],
+  "actions_allowed": false,
+  "min_confidence": "likely",
+  "policy": "SO propietario (Roku-based): sin ADB, sin paquetes de terceros. El motor no genera ninguna accion; solo se muestran ajustes nativos documentados.",
+  "user_actions": [
+    "Revisar Ajustes > Apps para desinstalar apps de terceros no usadas (si el SO lo permite).",
+    "Revisar Ajustes > Privacidad para desactivar telemetria/publicidad si existe la opcion.",
+    "No copiar nada del USB a este televisor: no admite paquetes de terceros y este USB NO es un dispositivo de firmware."
+  ],
+  "description": "Perfil informativo para TVs Daewoo con VIDAA (p. ej. 55DM75QV). Sin superficie de modificacion segura conocida: acciones_allowed=false siempre."
+}

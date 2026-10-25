@@ -1,0 +1,63 @@
+{
+  "profile": "android-tv/generic",
+  "os_family": "android-tv",
+  "models": [],
+  "actions_allowed": true,
+  "min_confidence": "conclusive",
+  "status": "baseline-pendiente-validacion-por-dispositivo",
+  "mechanism": "pm disable-user --user 0 <pkg> (reversible con pm enable --user 0 <pkg>)",
+  "safety": {
+    "dry_run_by_default": true,
+    "requires_explicit_confirmation_per_action": true,
+    "no_uninstall": true,
+    "no_root": true,
+    "no_firmware_modification": true,
+    "log_all_operations": true,
+    "restore_path": "pm enable --user 0 <pkg> para cada paquete deshabilitado; inventario inicial obligatorio"
+  },
+  "candidate_discovery": {
+    "known_packages": [
+      {"package": "com.google.android.play.games", "reason": "Google Play Games: bloat en TV, sin dependencias esenciales"},
+      {"package": "com.google.android.feedback", "reason": "App de feedback de Google: no aporta funcion en TV"},
+      {"package": "com.google.android.katniss", "reason": "Reportador de errores de Google: telemetria"},
+      {"package": "com.android.cts.ctsshim", "reason": "Paquetes de prueba CTS: solo test, no esenciales"},
+      {"package": "com.android.cts.priv.ctsshim", "reason": "Paquetes de prueba CTS: solo test, no esenciales"}
+    ],
+    "patterns": [
+      {"regex": "^com\\.android\\.cts\\.", "reason": "Paquetes de prueba CTS detectados en el inventario"},
+      {"regex": "\\.demo$", "reason": "App demo del fabricante detectada en el inventario"}
+    ]
+  },
+  "critical_exclusions": {
+    "packages": [
+      "com.android.systemui",
+      "com.android.settings",
+      "com.android.providers.settings",
+      "com.google.android.tv",
+      "com.android.tv",
+      "com.google.android.setupwizard",
+      "com.google.android.tvlauncher",
+      "com.google.android.gms",
+      "com.google.android.vending",
+      "com.google.android.tv.assistant",
+      "com.google.android.tvrecommendations",
+      "com.google.android.tv.frameworkpackagestubs",
+      "com.google.android.youtube.tv",
+      "com.google.android.onetimeinitializer",
+      "com.google.android.permissioncontroller",
+      "com.android.bluetooth",
+      "com.android.networkstack.inprocess",
+      "com.android.providers.media",
+      "com.android.providers.tv"
+    ],
+    "rules": [
+      "launcher Leanback (cualquier paquete que responda a la categoria LEANBACK_LAUNCHER)",
+      "cadena de arranque (boot completed critico)",
+      "conectividad: wifi, ethernet, bluetooth",
+      "manejo del mando a distanciar",
+      "salida de video: HDMI/CEC y DRM (Widevine y compatibilidad de apps de streaming)"
+    ],
+    "note": "Lista basica de paquetes AOSP/Android TV documentados. Antes de ejecutar en un dispositivo concreto, el motor debe comprobar en el inventario real que cada paquete candidato no cumple ninguna regla de exclusion y registrarlo en el log."
+  },
+  "description": "Perfil generico Android TV. Solo se aplica con evidencia concluyente (ADB en el dispositivo o ficha oficial). Para modelos nuevos (sin perfil propio) propone una lista conservadora de bloatware universal filtrada contra el inventario real y las exclusiones nucleo + del perfil. Toda accion sigue requiriendo confirmacion explicita del usuario y el modo por defecto es dry-run."
+}
