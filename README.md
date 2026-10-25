@@ -41,7 +41,7 @@ es **reversible** con un solo comando.
 
 ```bash
 # Tests (no tocan ningún dispositivo)
-python3 -m unittest discover -s tests          # 303 tests
+python3 -m unittest discover -s tests          # 303 tests (8 se saltan sin el binario adb descargable)
 
 # RECOMENDADO: menu interactivo en español (detectar/optimizar/restaurar)
 python3 cli.py gui

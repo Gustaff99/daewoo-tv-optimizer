@@ -22,6 +22,11 @@ from scripts.build_usb import (  # noqa: E402
     verify_manifest,
 )
 
+# El binario vendor/platform-tools/adb es un artefacto descargable (no se
+# distribuye en el repo publico). Construir la USB requiere ese binario, asi
+# que TestBuildUsb se salta cuando no existe; TestCollectSources no lo necesita.
+VENDORED_ADB = Path(__file__).resolve().parent.parent / "vendor" / "platform-tools" / "adb"
+
 
 class TestCollectSources(unittest.TestCase):
     def test_includes_core(self):
@@ -50,6 +55,10 @@ class TestCollectSources(unittest.TestCase):
         self.assertIn(".img", FIRMWARE_EXT)
 
 
+@unittest.skipUnless(
+    VENDORED_ADB.is_file(),
+    "vendor/platform-tools/adb ausente (binario descargable, no distribuido en el repo)",
+)
 class TestBuildUsb(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp())

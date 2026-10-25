@@ -1,6 +1,7 @@
 """Tests for detect.adb_probe."""
 import os
 import unittest
+from pathlib import Path
 from unittest import mock
 
 from detect.adb_probe import (
@@ -115,6 +116,12 @@ class TestListAdbDevices(unittest.TestCase):
         )
 
 
+# El binario vendor/platform-tools/adb es un artefacto descargable (no se
+# distribuye en el repo publico); el test que asume su presencia se salta
+# cuando no existe, en lugar de fallar.
+VENDORED_ADB = Path(__file__).resolve().parent.parent / "vendor" / "platform-tools" / "adb"
+
+
 class TestResolveAdbBin(unittest.TestCase):
     def test_env_var_wins(self):
         with mock.patch.dict(os.environ, {"DAEWOO_ADB": "/opt/adb"}):
@@ -124,6 +131,10 @@ class TestResolveAdbBin(unittest.TestCase):
         with mock.patch.dict(os.environ, {"DAEWOO_ADB": "   "}):
             self.assertNotEqual(resolve_adb_bin(), "   ")
 
+    @unittest.skipUnless(
+        VENDORED_ADB.is_file(),
+        "vendor/platform-tools/adb ausente (binario descargable, no distribuido en el repo)",
+    )
     def test_no_env_prefers_vendored(self):
         env = {k: v for k, v in os.environ.items() if k != "DAEWOO_ADB"}
         with mock.patch.dict(os.environ, env, clear=True):
