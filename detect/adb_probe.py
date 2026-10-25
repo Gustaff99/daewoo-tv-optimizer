@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Sequence
 
 from .identity import ANDROID_TV_PACKAGES, GOOGLE_TV_PACKAGES
+from ._paths import base_dir
 
 
 class AdbCommandError(Exception):
@@ -26,9 +27,7 @@ def resolve_adb_bin() -> str:
     env = os.environ.get("DAEWOO_ADB", "").strip()
     if env:
         return env
-    vendored = (
-        Path(__file__).resolve().parent.parent / "vendor" / "platform-tools" / "adb"
-    )
+    vendored = base_dir() / "vendor" / "platform-tools" / "adb"
     if vendored.is_file():
         return str(vendored)
     return "adb"

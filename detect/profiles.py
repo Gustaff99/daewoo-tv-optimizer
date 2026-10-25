@@ -23,6 +23,7 @@ from pathlib import Path
 from typing import Dict, Mapping, Optional, Tuple
 
 from .identity import CONFIDENCE_LEVELS
+from ._paths import base_dir
 
 DEFAULT_PROFILE_ID = "unsupported/default"
 
@@ -37,8 +38,8 @@ CONFIDENCE_RANK: Dict[str, int] = {
 
 def default_profiles_dir() -> Path:
     """Profiles ship next to the package so the tool works from a USB stick
-    regardless of the current working directory."""
-    return Path(__file__).resolve().parent.parent / "profiles"
+    regardless of the current working directory (source or frozen bundle)."""
+    return base_dir() / "profiles"
 
 
 def _valid_profile(data: object) -> bool:

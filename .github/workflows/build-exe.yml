@@ -1,0 +1,26 @@
+name: build-exe
+
+# Construye el ejecutable autocontenido (Windows) para distribuir en USB.
+# Manual: Actions -> build-exe -> Run workflow. El artefacto
+# "daewoo-tv-optimizer-windows" contiene el .exe listo para publicar
+# en un Release.
+on:
+  workflow_dispatch:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Instalar PyInstaller
+        run: pip install pyinstaller
+      - name: Build + smoke test
+        run: python scripts/build_exe.py
+      - name: Publicar artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: daewoo-tv-optimizer-windows
+          path: dist/daewoo-tv-optimizer.exe
