@@ -18,7 +18,10 @@ jobs:
       - name: Instalar PyInstaller
         run: pip install pyinstaller
       - name: Build + smoke test
-        run: python scripts/build_exe.py
+        # --gui: build windowed (sin consola); el doble clic abre la
+        # ventana tkinter. El smoke test headless verifica que la entrada
+        # sin argumentos falla elegante (exit 1 + aviso en el log).
+        run: python scripts/build_exe.py --gui
       - name: Publicar artefacto
         uses: actions/upload-artifact@v4
         with:

@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from pathlib import Path
 from typing import List, Optional
 
 from detect.adb_probe import (
@@ -43,6 +44,7 @@ from detect.identity import (
     identity_from_manual,
     resolve_profile,
 )
+from detect import _paths
 from detect.manual_input import ManualInputError, parse_manual_entry
 from detect.profiles import load_profiles
 from engine.audit_log import read_log
@@ -56,7 +58,13 @@ from engine.executor import (
 from engine.inventory import build_inventory, inventory_summary
 from engine.planner import PlanError, build_plan
 
-DEFAULT_LOG = "daewoo-optimizer-ops.jsonl"
+# Log de auditoría: en ejecutable congelado va en el home del usuario
+# (el CWD al hacer doble clic no es fiable); en fuente, relativo.
+DEFAULT_LOG = _paths.default_log_path()
+
+#: True si la entrada fue un .exe windowed (sin consola). Lo fija
+# _console_main() antes de interpretar argumentos.
+_ENTRY_WINDOWED = False
 
 
 # ---------------------------------------------------------------- ADB runner
@@ -336,7 +344,9 @@ def build_parser() -> argparse.ArgumentParser:
         description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    sub = p.add_subparsers(dest="command", required=True)
+    # required=False: sin argumentos (doble clic en el .exe) se abre la
+    # GUI, no un error de argparse que cerraría la consola al instante.
+    sub = p.add_subparsers(dest="command", required=False)
 
     sp = sub.add_parser("identify", help="identidad manual -> perfil")
     sp.add_argument("--model")
@@ -393,10 +403,109 @@ def cmd_gui(args: argparse.Namespace) -> int:
     return ui.run_menu(log=args.log)
 
 
+def run_gui_interactive() -> int:
+    """Arranca la interfaz sin fricción (doble clic / sin argumentos).
+
+    Prioridad:
+    1. Ventana gráfica (tkinter) si hay display: es lo que ve el usuario
+       final en Windows.
+    2. Menú de terminal si no hay display pero SÍ hay consola (Linux,
+       servidores con ssh, CI headless).
+    3. .exe windowed sin display: no hay dónde mostrar nada -> escribe
+       el error en un archivo junto al log y sale con código 1.
+    """
+    import ui_tk
+
+    if ui_tk.has_display():
+        return ui_tk.run()
+    if getattr(sys, "frozen", False) and _ENTRY_WINDOWED:
+        msg = (
+            "No se pudo abrir la interfaz gráfica (sin display).\n"
+            "En un PC normal, el doble clic abre una ventana con botones;\n"
+            "en servidores headless usa la CLI, p. ej.:\n"
+            "  daewoo-tv-optimizer identify --model <MODELO> --os <SO>\n"
+        )
+        try:
+            with open(ui_tk.fallback_log_path(), "a", encoding="utf-8") as f:
+                f.write(msg)
+        except OSError:
+            pass
+        return 1
+    import ui
+
+    return ui.run_menu()
+
+
 def main(argv: Optional[List[str]] = None) -> int:
     args = build_parser().parse_args(argv)
+    if getattr(args, "command", None) is None:
+        return run_gui_interactive()
     return args.func(args)
 
 
+def _reconfigure_stdio() -> None:
+    """Hace stdout/stderr robustos en todos los entornos.
+
+    - .exe windowed (sin consola): stdout/stderr son None -> se
+      redirigen a un archivo en el home para que NINGÚN comando crashee.
+    - Consola Windows: UTF-8 tolerante (acentos) sin UnicodeEncodeError.
+    """
+    if sys.stdout is None or sys.stderr is None:
+        # Siempre en el home: en windowed el CWD no es fiable (System32).
+        path = _paths.state_dir() / "console.log"
+        try:
+            path.parent.mkdir(parents=True, exist_ok=True)
+            f = open(path, "a", encoding="utf-8", errors="replace")
+        except OSError:
+            import os as _os
+
+            f = open(_os.devnull, "w", encoding="utf-8")
+        if sys.stdout is None:
+            sys.stdout = f
+        if sys.stderr is None:
+            sys.stderr = f
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
+
+
+def _console_main() -> int:
+    """Punto de entrada del ejecutable: robusto frente a doble clic.
+
+    - Captura excepciones y las imprime (antes: la consola cerraba y el
+      usuario no veía el error).
+    - Al salir de un .exe con consola, espera ENTER para que el usuario
+      pueda leer el resultado (antes: la ventana cerraba al instante).
+    """
+    global _ENTRY_WINDOWED
+    _ENTRY_WINDOWED = bool(
+        getattr(sys, "frozen", False) and sys.stdout is None
+    )
+    _reconfigure_stdio()
+    try:
+        return main()
+    except SystemExit as exc:
+        code = exc.code
+        if code is None:
+            return 0
+        return int(code) if isinstance(code, int) else 1
+    except KeyboardInterrupt:
+        print("\nInterrumpido por el usuario.", file=sys.stderr)
+        return 130
+    except Exception:
+        import traceback
+
+        traceback.print_exc()
+        return 1
+    finally:
+        if getattr(sys, "frozen", False) and sys.stdout is not None:
+            try:
+                input("\nPulse ENTER para salir...")
+            except (EOFError, OSError, ValueError):
+                pass
+
+
 if __name__ == "__main__":
-    raise SystemExit(main())
+    raise SystemExit(_console_main())

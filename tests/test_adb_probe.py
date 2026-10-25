@@ -147,26 +147,12 @@ class TestResolveAdbBin(unittest.TestCase):
             )
 
     def test_fallback_to_path_adb_when_no_vendored(self):
-        class FakePath:
-            def __init__(self, s: str):
-                self.s = s
-
-            def resolve(self):
-                return self
-
-            @property
-            def parent(self):
-                return FakePath(self.s)
-
-            def __truediv__(self, other):
-                return FakePath(self.s + "/" + str(other))
-
-            def is_file(self):
-                return False
-
+        # Hermetic: apunta base_dir a una raiz inexistente para que NO
+        # importe si el repo tiene (o no) el adb vendado descargado.
         env = {k: v for k, v in os.environ.items() if k != "DAEWOO_ADB"}
         with mock.patch.dict(os.environ, env, clear=True), mock.patch(
-            "detect.adb_probe.Path", FakePath
+            "detect.adb_probe.base_dir",
+            return_value=Path("/nonexistent-daewoo-root"),
         ):
             self.assertEqual(resolve_adb_bin(), "adb")
 

@@ -67,11 +67,15 @@ def _print(msg: str = "", out: PRINT = print) -> None:
     out(msg)
 
 
+class _InputEOF(Exception):
+    """stdin agotado: el menú debe salir, no bucle infinito."""
+
+
 def _input_safe(input_fn: INPUT) -> str:
     try:
         return input_fn()
     except EOFError:
-        return ""
+        raise _InputEOF
 
 
 def choose_device(
@@ -336,7 +340,13 @@ def run_menu(
     rc = 0
     while True:
         _print(BANNER, out)
-        choice = _input_safe(input_fn).strip()
+        try:
+            choice = _input_safe(input_fn).strip()
+        except _InputEOF:
+            # Sin entrada (stdin cerrado, CI, consola que se va): salir
+            # limpiamente en vez de buclear para siempre.
+            _print("\n(Sin entrada disponible: saliendo.)", out)
+            return rc
         if choice == "0":
             _print("Adios.", out)
             return rc

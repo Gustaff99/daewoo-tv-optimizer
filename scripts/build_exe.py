@@ -12,7 +12,11 @@ a USB stick (or run it in place) and double-click.
 
 Usage:
   python3 scripts/build_exe.py          # build + smoke test
+  python3 scripts/build_exe.py --gui    # build windowed con GUI tkinter
   python3 scripts/build_exe.py --skip-smoke
+
+El build --gui (el que se usa para Windows) no abre consola: el doble
+clic muestra la ventana gráfica directamente.
 
 Requires PyInstaller:  pip install pyinstaller
 """
@@ -61,7 +65,7 @@ def ensure_adb() -> Path:
     return adb
 
 
-def build(adb: Path) -> Path:
+def build(adb: Path, gui: bool = False) -> Path:
     sep = ";" if os.name == "nt" else ":"
     suffix = ".exe" if os.name == "nt" else ""
     out = ROOT / "dist" / f"daewoo-tv-optimizer{suffix}"
@@ -78,8 +82,15 @@ def build(adb: Path) -> Path:
         f"--add-data={str(adb.parent)}{sep}vendor/platform-tools",
         "--hidden-import=detect",
         "--hidden-import=engine",
-        str(ROOT / "cli.py"),
     ]
+    if gui:
+        # Sin consola: el doble clic abre la ventana tkinter directamente.
+        cmd += [
+            "--windowed",
+            "--hiddenimports=tkinter",
+            "--hiddenimports=tkinter.messagebox",
+        ]
+    cmd.append(str(ROOT / "cli.py"))
     print("[build_exe] " + " ".join(cmd), file=sys.stderr)
     subprocess.run(cmd, check=True)
     if not out.is_file():
@@ -87,7 +98,7 @@ def build(adb: Path) -> Path:
     return out
 
 
-def smoke_test(exe: Path) -> None:
+def smoke_test(exe: Path, gui: bool = False) -> None:
     print("[build_exe] smoke test: identify --model 55DM75QV --os VIDAA", file=sys.stderr)
     proc = subprocess.run(
         [str(exe), "identify", "--model", "55DM75QV", "--os", "VIDAA"],
@@ -103,15 +114,43 @@ def smoke_test(exe: Path) -> None:
     if '"profile": "unsupported/default"' not in proc.stdout:
         raise SystemExit("smoke test: identidad manual no cayó en fail-safe")
 
+    # Entrada sin argumentos (doble clic) no debe morir en silencio:
+    # - build de consola: menú terminal; con stdin cerrado sale con 0.
+    # - build --gui headless: no hay display ni consola; sale con 1 y
+    #   escribe el aviso en el log de errores (comportamiento esperado).
+    print("[build_exe] smoke test: entrada sin argumentos (doble clic)", file=sys.stderr)
+    proc = subprocess.run(
+        [str(exe)],
+        stdin=subprocess.DEVNULL, capture_output=True, text=True, timeout=180,
+    )
+    if gui:
+        if proc.returncode != 1:
+            raise SystemExit(
+                f"smoke test: build --gui headless debe salir 1 (sin display), "
+                f"salió {proc.returncode}"
+            )
+    else:
+        if proc.returncode != 0:
+            raise SystemExit(
+                f"smoke test: menú terminal con stdin cerrado debe salir 0, "
+                f"salió {proc.returncode}"
+            )
+        if "DAEWOO TV OPTIMIZER" not in (proc.stdout or "").upper():
+            raise SystemExit("smoke test: no se vio el banner del menú")
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--skip-smoke", action="store_true")
+    parser.add_argument(
+        "--gui", action="store_true",
+        help="build windowed con interfaz gráfica tkinter (para Windows)",
+    )
     args = parser.parse_args()
     adb = ensure_adb()
-    exe = build(adb)
+    exe = build(adb, gui=args.gui)
     if not args.skip_smoke:
-        smoke_test(exe)
+        smoke_test(exe, gui=args.gui)
     print(f"[build_exe] OK: {exe} ({exe.stat().st_size // 1024} KB)", file=sys.stderr)
     return 0
 
